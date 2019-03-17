@@ -211,9 +211,9 @@ body {
     }
 
     #about .column {
-        -ms-flex: 0 0 33.333%;
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     #history .column.column-left {
         -ms-flex: 0 0 30%;
@@ -237,9 +237,9 @@ body {
     max-width: 49.999%;
 }
 #history .column.column-left {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%; 
+    -ms-flex: 0 0 49.999%;
+    flex: 0 0 49.999%;
+    max-width: 49.999%; 
 }
 #history .column.column-right {
 
