@@ -6,13 +6,11 @@ body {
     font-size: 16px;
 
   }
-  /* Див - использует блок по дефолту, для всех новых елементов ХТМЛ5 застовляем их блоками
-  Блок - заствляет себя вести как див  */
+  /* Alla nya html5 element saknar block atributet som vanlig div har, måste ange så att olika tricks funkar på dem också  */
   footer, header, nav, section {
     display: block;
 }
-/* Все заголовки нужно писать в h1(подобные) для гугл роботов/CEO
-По факту должен быть только 1 H1 на сайт. */
+/* Det kan bara finnas ett H1 för google sök motor och vi gör alla H till samma font , BOLD och färg */
   h1,
   h2,
   h3,
@@ -24,6 +22,7 @@ body {
     color: #17baef;
   }
   
+ /*till alla links, färg och transition så att dem blir större och lite mindre i 0.2 sekunder när man laddar hemsidan*/
   a {
     color: #17baef;
     -webkit-transition: all 0.2s ease-in-out;
@@ -35,25 +34,25 @@ body {
     text-decoration: underline;
     
   }
-/* Контейнер используеться для ограничения ширины содержимого ОБС
-тут ограничители вынесены в медию */
+/* gör ett gemensam div som vi kan senare manipolera allt som finns i den*/
   .container {
     padding: 0 15px;
     margin-right: auto;
     margin-left: auto;
     display: block;
 }
-/* Чтобы в любом блоке/коде сразу отцентровать текст задвая данный класс */
+/* Att föränkla "text-center" så man kan bara ange klassen till ett div eller header och det skulle direkt funka */
 .text-center {
     text-align: center;
 }
-/* внутри этого класса, все будет юзать функцую flex ОБС почитать на сайте */
+/* så att vi kan senare i MEDIA manipulera storleken på divs i wrapper diven*/
 .wrapper {
     display: -ms-flexbox;
     display: flex;   
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+/* Lite klasser för att förenkla det , senare i koden när jag skriver ut text på sidan eller för att göra ngt "bold/ fetstil" */
 .green {
   font-weight: bold;
   color:green;
@@ -64,6 +63,7 @@ body {
 .boldme {
   font-weight: bold;
 }
+/*till divs så man kan manipulera senare t.ex. i @media */
 .column {
     width: 100%;
     min-height: 1px;
@@ -76,7 +76,7 @@ body {
     padding: 10px 0;
     background: red;
     color: #fff;
-    /* Прикрепляет хедер к топу страницы, далее хедер следует за скроллом */
+    /* Gör så att header följer med när man skrollar*/
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -85,7 +85,6 @@ body {
 
   .header .logo {
     margin: 0; 
-    font-size: 26px;
     padding-top: 10px;
     float: left;
   }
@@ -99,6 +98,7 @@ body {
     padding: 10px;
   }
   .nav>li {
+	  /*gör så att alla "li" blir i rad ist för att under varandra*/
     display: block;
     float: left;
 }
@@ -204,7 +204,7 @@ body {
     background: #042a36;
     color: #fff;
   }
-
+/* anger storleken på olika elemnts vid olika skärmsupplösningar */
   @media  screen and (min-width: 768px) and (max-width: 991px) {
     .container {
         width: 750px;
